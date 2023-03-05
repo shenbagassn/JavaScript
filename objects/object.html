@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+       // sum object properties
+
+       var salaries ={
+        john:500,
+        priya:500,
+        Balaji:500
+       }
+var sum = 0;
+
+for (var sal in salaries ){
+    sum = sum + salaries[sal];
+    
+}
+console.log(sum);
+        
+//check for emptiness
+
+var ob ={
+    name:"priya",
+    age:30
+}
+
+    function isEmpty(ob){
+    for(var key in ob){
+    console.log("false"); 
+    return false;
+    }
+    console.log("true"); 
+    return true;
+
+} 
+
+isEmpty();
+*/
+//Multiply numeric property values by 2
+
+var obj={
+    width:200,
+    height:100,
+    title:"my menu",
+    weight: 'fifty'
+};
+
+function multipleNumeric(){
+
+    for(var key in obj){
+          console.log(obj[key]);
+          if( typeof obj[key] === 'number'){
+           
+            obj[key]*= 2;
+             
+           
+          }
+    }console.log(obj);
+}
+multipleNumeric();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

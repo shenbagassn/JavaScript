@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*var obj ={
+            name:"priya",
+            age:30
+        }
+        var ob = obj;//copy reference of object
+        alert(obj.name);
+        alert(ob.name);
+*/
+        /*object method
+        var obj={
+            name:"priya",
+            age:30
+        }
+
+        function sayHi(){
+            alert("Hello");
+        }
+
+        obj.sayHi=sayHi;//method
+        obj.sayHi();*/
+function makeUser(){
+    return {
+        name:"john",
+        ref:this
+    };
+}
+
+var user = makeUser();
+alert(user.ref.name);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
