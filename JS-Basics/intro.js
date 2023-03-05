@@ -1,0 +1,1 @@
+alert("using External JS");

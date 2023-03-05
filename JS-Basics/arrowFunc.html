@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         greetUser(); 
+        //function
+         function greetUser(){
+            alert("hi");
+        };
+
+       
+        //function expression
+        var greetUser = function(){
+            alert("hi");
+        };
+
+        //sum function
+        function sum(a,b){
+            return a+b;
+        }
+      console.log(sum(5,5));
+        //arrow function with 2 arguments
+        var sum=(a,b)=>a+b;
+        //arrow function with one argument
+        var result= n=>n*2;
+        //arrow function with no arguments
+        var sum=()=>a+b;
+        // arrow function
+        var age=prompt("enter age");
+
+        var greetUser = (age>18)?
+        ()=> alert("you allowed"):
+        ()=> alert(" you not allowed");
+
+        greetUser();
+var sum= (a,b)=>{
+    var result =a+b;
+    return result;
+}
+
+console.log( sum(1,1));
+//rewrite to arrow fnc
+function ask(question,yes,no){
+    if(confirm(question)){
+        yes();}
+    else{no();}
+}
+
+ask("do you agree?",
+function(){alert("you agreed");},
+function(){alert("you cancelled the execution");}
+);
+
+
+
+//arrow fn
+
+function ask(question,yes,no){
+    if(confirm(question)){yes();}
+    else{
+        no();
+    }
+}
+ 
+ask("do you agree?",
+()=>alert("you agreed"),
+()=>alert("you cancelled the execution")
+);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
