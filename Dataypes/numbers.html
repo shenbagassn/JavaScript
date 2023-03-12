@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+//Numer Datatype
+        var billion =1000000000;
+        var billion=1_000_000_000;
+        alert(1e9==billion);
+
+        var microsecond=0.000001;
+        alert(microsecond==1e-6);
+
+        console.log(0.001==1e-3);
+        console.log(1.23e-6==0.00000123);
+       console.log(1234e-2==12.34); 
+       alert(0xff)
+
+//task 1 (adding 2 numbers)
+var a= +prompt("Enter first number");
+var b= +prompt("enter second number");
+alert( a+b);
+
+    //Task 2
+
+    console.log(1.35.toFixed(1)); //1.4
+    console.log(6.35.toFixed(1)); //6.3
+    console.log(Math.round(6.35));
+   
+
+    //Task3 Repeat until the input is a number
+        //Using do while
+   readNum();
+   function readNum(){
+do{
+var num =prompt("enter a number");
+}while(isNaN(num));
+alert(`read ${num}`);
+
+   }
+   
+   
+   //Using if else
+    readNumber();
+
+function readNumber(){
+
+    do{
+        var num1 = prompt("Enter a number");
+        if(isNaN(num1)){
+            continue;
+        }
+        alert("read" + num1);
+        break;
+    }while(true);
+    
+
+}
+alert(Math.random(4));
+   alert(Math.max(1,5));
+   alert(Math.min(1,5));
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
