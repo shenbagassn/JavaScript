@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+        
+        
+        function doAdd(){
+            alert("inside func");
+        var num1= document.getElementById("txt1").value;
+        var num2= document.getElementById("txt2").value;
+        var result = Number(num1) + Number (num2) ;
+        document.getElementById("res").innerHTML=result;
+        }
+
+        function doSub(){
+var num1 =document.getElementById("txt1").value;
+var num2=document.getElementById("txt2").value;
+var result = Number (num1)- Number(num2);
+ document.getElementById("res").innerHTML = result;
+
+        }
+  function doMul(){
+          var num1 = document.getElementById("txt1").value;
+          var num2 = document.getElementById("txt2").value;
+          var result =  Number(num1) * Number(num2);
+          document.getElementById("res").innerHTML=result;
+        }
+          function doDiv(){
+            var num1 = document.getElementById("txt1").value;
+            var num2= document.getElementById("txt2").value;
+            var result= Number(num1)/ Number(num2);
+            document.getElementById("res").innerHTML=result; 
+        }
+    </script>
+</head>
+<body>
+    <h3>Simple Calculator</h3>
+    Number 1: <input type="number" id="txt1"> <br> <br>
+    Number 2: <input type="number" id="txt2"> <br> <br>
+    <button onclick="doAdd()">Add</button> &nbsp;
+    <button onclick="doSub()">Subtract</button> &nbsp;
+    <button onclick="doMul()">Multiply</button> &nbsp;
+    <button onclick="doDiv()">Divide</button> <br> <br>
+    Result: <span id="res">00000 </span>
+
+</body>
+</html>
