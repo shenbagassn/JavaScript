@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+function calc(op){
+
+alert("inside function");
+
+var num1= document.getElementById("txt1").value;
+var num2= document.getElementById("txt2").value;
+var result;
+var spanElement= document.getElementById("res");
+
+if(op=="add"){
+result= Number(num1) + Number(num2);
+}
+else if(op=="sub"){
+result= num1 - num2;
+}
+else if(op=="mul"){
+    result= num1 * num2;
+}
+else if(op=="div"){
+    result = num1/ num2;
+}
+
+
+document.getElementById("res").innerHTML=result;
+
+}
+    </script>
+</head>
+<body>
+    <h3>Calculator using single function with if..else if</h3>
+    Number1: <input type="text" id="txt1"> <br> <br>
+    Number2: <input type="text" id="txt2"> <br> <br>
+
+    <button onclick="calc('add')"> Add </button> &nbsp;
+    <button  onclick="calc('sub')">subtract</button>&nbsp;
+    <button  onclick="calc('mul')">Multiply</button>&nbsp;
+    <button  onclick="calc('div')">Divide</button> <br> <br>
+    Result: <span id="res">0000 </span>
+</body>
+</html>
