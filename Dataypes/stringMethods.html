@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str1= "hi gopi, h r u gopi?";
+        //Search a character
+        alert(str1.charAt(3));
+
+        //Search a substring(3 methods)
+        alert(str1.indexOf("go"));
+        alert(str1.indexOf("go",10));
+        alert(str1.indexOf("goa")); // returns -1, if string not available
+       
+        alert(str1.lastIndexOf("go"));
+        alert(str1.lastIndexOf("go",10));
+        alert(str1.lastIndexOf("goa"));
+      
+        alert(str1.search("GO"));//returns -1, works like indexOf
+        alert(str1.search(/GO/i));// returns 3, search case insensitive
+
+        //extract a substring from main string
+        var str= "hi gopi, h r u Gopi?";
+        alert(str.slice(3));
+        alert(str);
+        alert(str.slice(3,7));
+        alert("Using negative numbers in slice")
+        alert(str.slice(-5)); // extract from last 
+        alert(str.slice(-5,-1));
+        alert(str.substr(3,4));
+        alert(str.substr(-5,4));
+
+        //Replace a string 
+        var str2= "hi gopi, h r u gopi?";
+        alert(str2.replace("gopi","bala"));// replace only first occurence // by string
+        alert(str2.replaceAll("gopi","bala"));
+        alert(str2.replace(/gopi/g,"bala"));// replace all using reg.exp.
+
+        var str3=  "hi gopi, h r u Gopi?";
+        alert(str3.replace(/gopi/g,"bala")); //replace all, but case sensitive
+        alert(str3.replace(/gopi/gi,"bala"));
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
