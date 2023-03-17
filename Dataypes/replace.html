@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function doReplace(){
+            var str1= document.getElementById("find").value;
+            var regExp = new RegExp(str1, "g");
+            var str2= document.getElementById("replace").value;
+            var result;
+             var isChecked =document.getElementById("chck").checked;
+            console.log(isChecked);
+
+            if(isChecked)
+            {
+                result= data.replace(regExp,str2);
+            }
+               else{
+                 result = data.replace(str1,str2);
+            
+               }
+          document.getElementById("res").innerHTML= result;
+             }
+    </script>
+</head>
+<body>
+    <H1>Replace a string using regular expression</H1>
+    <p id="para"></p>
+    Find: <input type="text" name="" id="find"> <br> <br>
+    Replace: <input type="text" name="" id="replace"> <br> <br>
+    All Matches <input type="checkbox" name="" id="chck"> <br> <br>
+    <button onclick="doReplace()">Replace</button> <br> <br>
+    Result: <span id="res"></span>
+    
+</body>
+<script>
+    var data="Hi shenba, how are you shenba?";
+    document.getElementById("para").innerHTML=data;
+</script>
+</html>
