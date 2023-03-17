@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doSlice(){
+            alert("func called");
+            var start= document.getElementById("st").value;
+            var end= document.getElementById("en").value;
+            var result = data.slice(start,end);
+            document.getElementById("res").innerHTML= result;
+            
+        }
+    </script>
+</head>
+<body>
+   <h3> Slice a string using index numbers</h3>
+   <p id="para"></p>
+   Start: <input type="text" name="" id="st"> <br> <br>
+   End: <input type="text" name="" id="en"> <br> <br>
+   <button onclick="doSlice()">Slice</button> <br> <br>
+   Result: <span id="res"></span>
+</body>
+<script>
+    var data = "Hi, I'm Shenba from Morrisville";
+    document.getElementById("para").innerHTML= data;
+</script>
+</html>
