@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function username(){
+            alert("inside function");
+            var txt= document.getElementById("txt1").value;
+            var isAvailable =  data.includes(txt);
+           var span= document.getElementById("sp");
+            alert(isAvailable);
+            if(isAvailable){
+                span.innerHTML= "Sorry! Username not available";
+                span.style.color="red";
+            }else{
+                span.innerHTML="Congrats! Username available";
+                span.style.color="green";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Username check availability</h1>
+    <p id="para"></p>
+    
+    Username: <input type="text" name="" id="txt1" onblur="username()"> <br> <br>
+    <span id="sp">000</span> 
+    
+</body>
+<script>
+    var data="priya,balaji,arun,shivani";
+    document.getElementById("para").innerHTML=data;
+</script>
+</html>
