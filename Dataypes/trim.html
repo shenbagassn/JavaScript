@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doTrim(){
+            alert("inside fnc");
+                        
+            document.getElementById("txt").value= document.getElementById("txt").value.trim();
+          
+        }
+    </script>
+</head>
+<body>
+    <h2>Trim </h2>
+    Username: <input type="text" name="" id="txt" onblur="doTrim()" >
+</body>
+</html>
