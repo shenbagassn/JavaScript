@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doZoomIn(){
+            console.log("inside zoom in");
+            var img = document.getElementById("img");
+            var ht = img.style.height;
+            console.log(ht);
+            var wid = img.style.width;
+            console.log(wid);
+            var span= document.getElementById("sp");
+            if(wid<="500px")
+            {
+            var newHeight= parseInt(ht)+ 50 + "px";
+            img.style.height= newHeight;
+            
+            var newWidth = parseInt(wid) + 50 + "px";
+            img.style.width= newWidth;
+            }else{
+                span.style.color="red";
+                span.innerHTML= "You reached your maximum zoom in level";
+            }
+        }
+        function doZoomOut(){
+            console.log("inside zoom out");
+            var img = document.getElementById("img");
+            var ht = img.style.height;
+            console.log(ht);
+            var wid = img.style.width;
+            console.log(wid);
+            var span= document.getElementById("sp");
+            
+           if(wid>="200px"){
+            var newHeight= parseInt(ht) - 50 +"px";
+            img.style.height= newHeight;
+
+            var newWidth= parseInt(wid) - 50 + "px";
+            img.style.width= newWidth;
+           }else{
+            span.innerHTML="You reached the maximum zoom out level";
+            span.style.color="red";
+           }
+          
+            
+        }
+    </script>
+</head>
+<body>
+   <h2>Zoom in and zoom out Image</h2>
+<img src="angular.png" style="height: 300px; width: 400px;" id="img" alt=""> <span id="sp">000</span> <br> <br>
+<button onclick="doZoomIn()">Zoom In</button> &nbsp;
+<button onclick="doZoomOut()">Zoom Out</button>
+</body>
+</html>
