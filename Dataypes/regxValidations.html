@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doValidations(op){
+            alert("inside func");
+            var email= document.getElementById("e").value;
+            console.log(email);
+            var phone= document.getElementById("ph").value;
+            console.log(phone);
+            var url= document.getElementById("u").value;
+            console.log(url);
+            var emailspan =document.getElementById("espan");
+            var phonespan =document.getElementById("pspan");
+            var urlspan= document.getElementById("uspan");
+           switch(op){
+            case 'em':
+                    if(email.match(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)){
+                    emailspan.innerHTML = "valid email";
+                    emailspan.style.color="green";
+                    }else{
+                    emailspan.innerHTML = "Invalid email";
+                    emailspan.style.color="red";  
+                    }
+                    break;
+
+            case 'ph':
+                
+                    if(phone.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)){
+                        phonespan.innerHTML="Valid phone number";
+                        phonespan.style.color="green";
+                    }else{
+                        phonespan.innerHTML="Invalid phone number";
+                        phonespan.style.color="red";
+                        
+                    }break;
+            case 'ur':
+                    if(url.match(/^((https?):\/\/)?([w|W]{3}\.)+[a-zA-Z0-9\-\.]{3,}\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/)){
+                        urlspan.innerHTML="valid url ";
+                        urlspan.style.color="green";
+                    }else{
+                        urlspan.innerHTML="Invalid url ";
+                        urlspan.style.color="red";
+                    }
+                    break;
+           }
+        
+        }
+
+       
+    </script>
+</head>
+<body>
+    <h2>Reg.Expression validations</h2>
+    Email: <input type="text" name="" id="e" onblur="doValidations('em')"> <span id="espan"> 00</span> <br> <br>
+    Phone: <input type="text" name="" id="ph" onblur="doValidations('ph')"> <span id="pspan">00 </span>  <br> <br>
+    URL:   <input type="text" name="" id="u" onblur="doValidations('ur')"> <span id="uspan">00</span>
+</body>
+</html>
