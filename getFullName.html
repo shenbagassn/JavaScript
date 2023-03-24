@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function first(){
+            document.getElementById("first").innerHTML="Please enter first name";
+        }
+        function last(){
+            document.getElementById("last").innerHTML="Please enter last name";
+        }
+        function getFullName(){
+            alert("inside fnc");
+            var firstName= document.getElementById("t1").value;
+            console.log(firstName);
+            var lastName= document.getElementById("t2").value;
+            console.log(lastName);
+           firstName=   firstName.charAt(0).toUpperCase() + firstName.slice(1).toLowerCase() ;
+           lastName= lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
+
+            var result = firstName + lastName;
+            document.getElementById("sp1").innerHTML= result;
+        }
+    </script>
+</head>
+<body>
+  <h2>Get FullName</h2>  
+  Firstname: <input type="text" name="" id="t1" onblur="first()"> <span id="first"></span> <br> <br>
+  Lastname: <input type="text" name="" id="t2" onblur="last()"> <span id="last"></span> <br> <br>
+  <button onclick="getFullName()">GetFullName</button> <br> <br>
+  Result: <span id="sp1"></span>
+</body>
+</html>
