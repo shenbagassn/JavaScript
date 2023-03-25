@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var username= ["priya","balaji","arjun","shivani"];
+        function loadArray(){
+            
+            document.getElementById("p1").innerHTML= username;
+        }
+
+        function userNameCheck(txtboxValue){
+            alert(txtboxValue);
+           var isAvailable = username.indexOf(txtboxValue);
+            var span= document.getElementById("sp1");
+            alert(isAvailable);
+           if(isAvailable>=0){
+            span.innerHTML="Sorry! Username already taken";
+            span.style.color="red";
+           }
+           else{
+            span.innerHTML="Username available";
+            span.style.color="green";
+           }
+        }
+
+    </script>
+</head>
+<body onload="loadArray()">
+   <h2>1. UserName check with indexOf Method</h2> 
+    <p id="p1"></p>
+    UserName: <input type="text" name="" id="txt1" onblur="userNameCheck(this.value)"> <br> <br>
+    <span id="sp1">0000</span>
+</body>
+</html>
