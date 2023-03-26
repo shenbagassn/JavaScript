@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function checkUsrName(usrname){
+        console.log(arr);
+        var isusrnameAvailable = false;
+        var span= document.getElementById("sp1");
+
+        for(var i=0;i<=arr.length;i++){
+            if(usrname.toLowerCase()==arr[i].toLowerCase()){
+                isusrnameAvailable=true;
+                break;
+            }
+        }
+        if(isusrnameAvailable==true){
+            span.innerHTML="Sorry! Username already taken";
+            span.style.color="red";
+        }
+        else{
+            span.innerHTML=" Username available";
+            span.style.color="green";
+        }
+ }
+    </script>
+</head>
+<body>
+    <h2>Username check using for loop</h2>
+    <p id="p1"></p>
+    Username: <input type="text" name="" id="txt1" onblur="checkUsrName(this.value)"> <br> <br>
+    <span id="sp1"></span>
+</body>
+<script>
+    var arr= ["gopi","arun","bala","krish"];
+    document.getElementById("p1").innerHTML=arr;
+</script>
+</html>
