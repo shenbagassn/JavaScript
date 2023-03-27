@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = ["hi",10,"hello",45,"good",100,"morning",89,"john",66];
+        var strArr=[];
+        var numArr=[];
+      
+        function callArr(){
+            document.getElementById("p1").innerHTML= arr;
+        }
+        function separateValues(){
+            var str=document.getElementById("str1");
+        var num =document.getElementById("num1");
+            console.log("inside fnc");
+        for(var i=0;i<=arr.length;i++){
+            if(isNaN(arr[i])){
+                strArr.push(arr[i]);
+            }
+            else{
+                numArr.push(arr[i]);
+            }
+        }
+        str .innerHTML=strArr.sort();
+        num.innerHTML=numArr.sort(function(a,b){
+            return a-b;
+        });
+       
+        
+        }
+    </script>
+</head>
+<body onload="callArr()">
+    <h2> Separate numbers and string in a array</h2>
+    <p id="p1"></p> 
+    <button onclick="separateValues()">Separate Values</button> <br> <br>
+    String: <span id="str1"></span> <br> <br>
+    Number: <span id="num1"></span>
+
+    
+</body>
+</html>
