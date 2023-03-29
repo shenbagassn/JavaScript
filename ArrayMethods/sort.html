@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script>
+    
+        var usrname=["priya","balaji","shivani","arjun"];
+        var numarr=[89,100,10,23,39,200];
+        var mixarr=["hi",10,"hello",45,"good",100,"morning",89];
+        console.log(usrname);
+        console.log(usrname.sort());// alphabetical order of string array
+        console.log(usrname.sort().reverse()); // descending the alphabetical order of string array
+       
+        console.log(numarr);
+        console.log(numarr.sort());
+
+        console.log(numarr.sort(function(a,b){ //ascending order of numbered array
+            return a-b;
+                }));
+
+        console.log(numarr.sort(function(a,b){  //descending order of numbered arrray
+            return b-a;
+        }));
+
+        console.log(mixarr);
+        console.log(mixarr.sort()); //to sort number and string array
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
