@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mirrorEffect(text){
+            console.log("inside fnc");
+            document.getElementById("sp1").innerHTML = text.split("").reverse().join("");
+            }
+    </script>
+</head>
+<body>
+    <h2>Mirror effect</h2>
+    Data: <input type="text" name="" id="tx1" onblur="mirrorEffect(this.value)">
+    <span id="sp1"></span>
+</body>
+</html>
