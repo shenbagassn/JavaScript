@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var si;
+        function getTimer() {
+            var dt = new Date();
+            var time = dt.toLocaleTimeString();
+            document.getElementById("p1").innerHTML = time;
+        }
+        function getTime() {
+            getTimer();
+            si = setInterval(getTimer, 1000);
+        }
+        function stopTime() {
+            console.log("inside stoptime fnc");
+            clearInterval(si);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Timer Functions</h2>
+    <button onclick="getTime()">Start Timer</button> &nbsp;
+    <button onclick="stopTime()">Stop Timer</button>
+    <p id="p1"></p>
+</body>
+
+</html>
