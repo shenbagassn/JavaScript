@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arrObj = [{ username: "priya", password: "priya123" },
+        { username: "balaji", password: "balaji123" },
+        { username: "arjun", password: "arjun123" },
+        { username: "shivani", password: "shivani123" },
+        { username: "arun", password: "arun123" }];
+
+        function loadArr() {
+            document.getElementById("p1").innerHTML = JSON.stringify(arrObj);
+        }
+
+        function login() {
+            var usrname = document.getElementById("usr1").value;
+            var pswd = document.getElementById("pswd1").value;
+            console.log(arrObj[0].username);
+            var span = document.getElementById("sp1");
+            var flag = false;
+            for (var i in arrObj) {
+                console.log(arrObj[i]);
+                if (arrObj[i].username == usrname && arrObj[i].password == pswd) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag == true) {
+
+                window.location.href = " mainPage.html";
+            } else {
+                span.innerHTML = "Invalid Username and Password";
+                span.style.color = "red";
+            }
+        }
+    </script>
+</head>
+
+<body onload="loadArr()">
+    <p id="p1"></p>
+    Username: <input type="text" name="" id="usr1"> <br> <br>
+    Password: <input type="password" name="" id="pswd1"> <br> <br>
+    <button onclick="login()">Login</button> &nbsp; <span id="sp1"></span>
+</body>
+
+</html>
