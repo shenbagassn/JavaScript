@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var markArr=[89,97,45,75,98];
+        var newArr=[];
+        function loadArr(){
+            document.getElementById("p1").innerHTML= markArr;
+        }
+        function addGraceMarks(){
+            console.log("inside fnc");
+            for(var i=0;i<markArr.length;i++){
+                var result = markArr[i]+10;
+               if(result<=100){
+                newArr.push(result);
+               }
+               else{
+                newArr.push(100);
+               }
+                document.getElementById("sp1").innerHTML= newArr;
+            }
+        }
+    </script>
+</head>
+<body onload="loadArr()">
+   <h2>Add Grace Marks</h2> 
+   <p id="p1"></p>
+   <button onclick="addGraceMarks()">Add Grace Marks</button> <br> <br>
+   <span id="sp1"></span>
+</body>
+</html>
