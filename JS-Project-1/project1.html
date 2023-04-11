@@ -1,0 +1,32 @@
+<!DOCTYPE html>                                             
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="project1.js">
+     </script>
+</head>
+<body onload="displayList(firstArray)">
+  <h1> JavaScript Project - ToDoList </h1>
+  List <input type="text" name="" id="txt1"> <br> <br>
+  <button onclick="doOperation('push')">Push</button> &nbsp; 
+  <button onclick="doOperation('pop')">Pop</button>  &nbsp;  &nbsp;
+  <button onclick="doOperation('shift')">Shift</button>  &nbsp; &nbsp;
+  <button onclick="doOperation('unshift')">Unshift</button> <br> <br>
+  Search: <input type="text" value="" onkeyup="dosearch(this.value)"> <br> <br>
+ 
+  
+  <div id="editdiv" style="display: none;">
+    List: <input type="text" name="" id="txt2"> <br> <br>
+    <button onclick="doUpdate()">Update</button>
+  </div>
+
+  <div id="r1"></div>
+  <span id="searchSpan"> </span>
+  
+
+</body>
+
+</html>
